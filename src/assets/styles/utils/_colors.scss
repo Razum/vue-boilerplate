@@ -1,0 +1,15 @@
+/**
+ * Iterate color map and dynamically create `.bg-{color}` and .{color} classes
+ */
+@each $color, $tones in $colors {
+  @each $tone, $color_hex in $tones {
+
+    .bg-#{if($tone == 0, #{$color}, #{$color}#{$tone})} {
+      background-color: $color_hex !important;
+    }
+
+    .#{if($tone == 0, #{$color}, #{$color}#{$tone})} {
+      color: $color_hex !important;
+    }
+  }
+}

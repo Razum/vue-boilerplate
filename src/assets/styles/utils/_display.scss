@@ -1,0 +1,15 @@
+.block {
+  display: block;
+}
+
+.inline-block {
+  display: inline-block;
+}
+
+.flex-1 {
+  flex: 1 0 0;
+}
+
+.flex {
+  @include flex;
+}

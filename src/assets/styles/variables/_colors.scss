@@ -1,0 +1,26 @@
+$colors: (
+        black: (
+                0: #000,
+        ),
+        white: (
+                0: #fff,
+        ),
+        blue: (
+                0: #0473e8
+        ),
+        pink: (
+                0: #eb84cf
+        )
+);
+
+/**
+ * Grab colors from a color map
+ * @param  {string} $color
+ * @param  {number} $tone
+ * @return {string}
+ * @example
+ * background-color: color(blue, 1);
+ */
+@function color($color, $tone: 0) {
+  @return map-get(map-get($colors, $color), $tone);
+}

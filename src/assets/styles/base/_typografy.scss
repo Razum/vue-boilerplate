@@ -1,0 +1,33 @@
+html {
+  font-size: 14px;
+  color: color(black);
+
+  @include breakpoint(md) {
+    font-size: 16px;
+  }
+}
+
+body {
+  font-family: sans-serif;
+  font-weight: 300;
+}
+
+.h1 {
+  font-size: 2rem;
+}
+
+.h2 {
+  font-size: 1.5rem;
+}
+
+.h3 {
+  font-size: 1.25rem;
+}
+
+.h4 {
+  font-size: 1rem;
+}
+
+.h5 {
+  font-size: 0.85rem;
+}
