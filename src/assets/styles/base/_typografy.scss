@@ -1,6 +1,7 @@
 html {
   font-size: 14px;
   color: color(black);
+  font-family: Arial, sans-serif;
 
   @include breakpoint(md) {
     font-size: 16px;
