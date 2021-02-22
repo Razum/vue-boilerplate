@@ -1,6 +1,6 @@
 <template>
   <label class="label" :for="$attrs.id">{{ label }}</label>
-  <input class="input" :id="$attrs.id" :type="type" :value="modelValue" @input="change"/>
+  <input class="input" :id="$attrs.id" :type="type" :value="value" @input="onChange"/>
 </template>
 
 <script>
@@ -8,18 +8,15 @@ export default {
   name: "TextInput",
   inheritAttrs: false,
   props: {
-    modelValue: String,
+    onChange: Function,
+    value: String,
     label: String,
     type: {
       type: String,
       default: "text"
     }
   },
-  methods: {
-    change: function (event) {
-      this.$emit("update:modelValue", event.target.value);
-    }
-  }
+  methods: {}
 }
 </script>
 

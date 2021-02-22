@@ -1,40 +1,28 @@
 <template>
-    <header class="header">Header</header>
-    <div class="content">
-      <button @click="isOpen=true">Open modal</button>
-      <HelloWorld msg="Welcome to Your Vue.js App"/>
-      <router-view></router-view>
-      <Modal :isOpen="isOpen" @close="isOpen=false" medium/>
+  <header class="header">Header</header>
+  <div class="content">
 
-      <FormGroup>
-        <TextInput v-model="text" :type="'text'" id="txt" :label="'Your name'" />
-      </FormGroup>
-      <FormGroup>
-        <Toggle v-model="checked" id="toggle" />
-      </FormGroup>
-      <Button :onClick="onClick">Submit</Button>
-    </div>
-    <footer class="footer">Footer</footer>
+    <router-view></router-view>
+    <!--
+    <button @click="isOpen=true">Open modal</button>
+    <Modal :isOpen="isOpen" @close="isOpen=false" medium/>
+
+          <FormGroup>
+            <TextInput v-model="text" :type="'text'" id="txt" :label="'Your name'" />
+          </FormGroup>
+          <FormGroup>
+            <Toggle v-model="checked" id="toggle" />
+          </FormGroup>
+          <Button :onClick="onClick">Submit</Button>-->
+  </div>
+  <footer class="footer">Footer</footer>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
-import Modal from "@/components/Modal";
-import FormGroup from "@/components/form-controls/FormGroup";
-import TextInput from "@/components/form-controls/TextInput";
-import Toggle from "@/components/form-controls/Toggle";
-import Button from "@/components/Button";
 
 export default {
   name: 'App',
-  components: {
-    HelloWorld,
-    Modal,
-    FormGroup,
-    TextInput,
-    Toggle,
-    Button
-  },
+  components: {},
   data: () => {
     return {
       isOpen: false,
@@ -43,7 +31,7 @@ export default {
     }
   },
   methods: {
-    onClick: function() {
+    onClick: function () {
       console.log("Click");
     }
   },
@@ -59,7 +47,6 @@ export default {
   // font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  text-align: center;
   color: #2c3e50;
   min-height: 100%;
 }
