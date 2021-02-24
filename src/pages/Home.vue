@@ -38,6 +38,9 @@ export default {
       this.text = evt.target.value;
     },
     onSubmit: function () {
+      if (!this.text.trim()) {
+        return null;
+      }
       this.addItem(this.text);
       this.text = "";
     },
